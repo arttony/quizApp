@@ -3,6 +3,11 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 
+#question{
+    font-weight: bolder;
+    font-size: 300% ;
+}
+
 /*to center the game*/
 body{
     display: flex;
@@ -22,4 +27,26 @@ body{
     box-shadow: 0 0 3px 2px;
 }
 
-
+#answer-container{
+    display: grid;
+    gap: 10px;
+    margin: 10px;
+}
+#option1{
+    grid-column-start: 0;
+}
+#option2{
+    grid-column-start: 2;
+}
+#option3{
+    grid-column-end: 0;
+}
+#option4{
+    grid-column-end: 0;
+}
+button{
+    height: 30px;
+}
+#start{
+    margin: 0, 0, 10px, 0;
+}
