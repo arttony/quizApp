@@ -9,10 +9,14 @@ body{
     justify-content: center;
     height: 100vw;
     width: 100vh;
+    background-color: rgba(78, 10, 141, 0.507);
 }
 
-#gameContainer{
-    
+.game-container{
+    width: 800px;
+    max-width: 80%;
+    background-color: orange;
+    border-radius: 5px;
 }
 
 
