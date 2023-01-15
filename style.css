@@ -1,3 +1,4 @@
+/*cahnge all text font styles*/
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
@@ -12,11 +13,13 @@ body{
     background-color: rgba(78, 10, 141, 0.507);
 }
 
-.game-container{
-    width: 800px;
-    max-width: 80%;
-    background-color: orange;
-    border-radius: 5px;
+#game-container{
+    height: 400px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 2px;
 }
 
 
