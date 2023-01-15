@@ -27,6 +27,7 @@ body{
     box-shadow: 0 0 3px 2px;
 }
 
+/*grid styling for buttons*/
 #answer-container{
     display: grid;
     gap: 10px;
@@ -47,6 +48,7 @@ body{
 button{
     height: 30px;
 }
+
 #start{
     margin: 0, 0, 10px, 0;
 }
