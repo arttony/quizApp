@@ -5,7 +5,8 @@
 //keep track of score
 const score = 0
 //function to start game
-document.getElementById('start').addEventListener('click', ()=> {
+const startBttn = document.getElementById('start')
+    startBttn.addEventListener('click', ()=> {
     console.log('lol')
     console.log(question1.question)
     const gameContainer = document.createElement('div')
@@ -13,7 +14,8 @@ document.getElementById('start').addEventListener('click', ()=> {
     gameContainer.append('AYYYYOOO')
     const body = document.querySelector('body')
     body.appendChild(gameContainer)
-})
+    startBttn.remove()
+    })
 //alert for win w/ play again?
 
 //alert for lost w/ play again?
