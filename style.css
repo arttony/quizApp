@@ -25,6 +25,8 @@ body{
     border: 5px solid black;
     border-radius: 10px;
     box-shadow: 0 0 3px 2px;
+    align-items: center;
+    justify-content: center;
 }
 
 /*grid styling for buttons*/
@@ -51,4 +53,8 @@ button{
 
 #start{
     margin: 0, 0, 10px, 0;
+}
+
+.hidden{
+    display: none;
 }

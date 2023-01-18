@@ -8,9 +8,8 @@ const startBttn = document.getElementById("start");
 startBttn.addEventListener("click", () => {
   console.log("lol");
   //console.log(question1.question);
-  const gameContainer = document.createElement("div");
+  /* const gameContainer = document.createElement("div");
   gameContainer.setAttribute("id", "game-container");
-  gameContainer.append("AYYYYOOO");
   const body = document.querySelector("body");
   body.appendChild(gameContainer);
   const questionContainer = document.createElement('div')
@@ -19,10 +18,28 @@ startBttn.addEventListener("click", () => {
   question.setAttribute('id', 'question')
   question.append(question1.question)
   questionContainer.appendChild(question)
-  const options = document.createElement('ul')
-  const option1 = document.createElement('li')
-  gameContainer.appendChild(questionContainer)
-  startBttn.remove();
+  const options = document.createElement('div')
+  const option1 = document.createElement('button')
+  option1.setAttribute('id', 'option1')
+  option1.append(question1.option1)
+  const option2 = document.createElement("button");
+  option2.setAttribute("id", "option2");
+  option2.append(question1.option2);
+  const option3 = document.createElement("button");
+  option3.setAttribute("id", "option3");
+  option3.append(question1.option3);
+  const option4 = document.createElement("button");
+  option4.setAttribute("id", "option4");
+  option4.append(question1.option4);
+  options.appendChild(option1)
+  options.appendChild(option2);
+  options.appendChild(option3);
+  options.appendChild(option4);
+  questionContainer.appendChild(options)
+  gameContainer.appendChild(questionContainer) */
+  const gameContainter = document.querySelector('main')
+  gameContainter.classList.remove('hidden')
+  startBttn.style.display =  "none"
 });
 
 //alert for win w/ play again?
