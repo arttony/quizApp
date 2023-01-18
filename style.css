@@ -13,8 +13,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vw;
-    width: 100vh;
+    max-height: 150vh;
+    max-width: 150vw;
     background-color: rgba(78, 10, 141, 0.507);
 }
 

@@ -1,13 +1,19 @@
-document.getElementById('start').addEventListener('click', ()=> {
-    console.log('lol')
-})
+
 
 //keep track of time stretch goal maybe?
 
 //keep track of score
-
+const score = 0
 //function to start game
-
+document.getElementById('start').addEventListener('click', ()=> {
+    console.log('lol')
+    console.log(question1.question)
+    const gameContainer = document.createElement('div')
+    gameContainer.setAttribute('id', 'game-container')
+    gameContainer.append('AYYYYOOO')
+    const body = document.querySelector('body')
+    body.appendChild(gameContainer)
+})
 //alert for win w/ play again?
 
 //alert for lost w/ play again?
@@ -18,3 +24,10 @@ document.getElementById('start').addEventListener('click', ()=> {
     //maybe change text.content?
 
 //how do i store the questions and optional answers?
+const question1 = {
+    question: 'What time is it',
+    option1: 'yo',
+    option2: 'nope',
+    option3: 'okay',
+    option4: 'lol'
+}
