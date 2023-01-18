@@ -8,6 +8,7 @@ const startBttn = document.getElementById("start");
 startBttn.addEventListener("click", () => {
   console.log("lol");
   //console.log(question1.question);
+  
   /* const gameContainer = document.createElement("div");
   gameContainer.setAttribute("id", "game-container");
   const body = document.querySelector("body");
@@ -35,11 +36,21 @@ startBttn.addEventListener("click", () => {
   options.appendChild(option2);
   options.appendChild(option3);
   options.appendChild(option4);
+  options.append(option1, option2, option3, option4)
   questionContainer.appendChild(options)
   gameContainer.appendChild(questionContainer) */
+  
   const gameContainter = document.querySelector('main')
   gameContainter.classList.remove('hidden')
-  startBttn.style.display =  "none"
+  const question = document.getElementById('question').textContent = question1.question
+  const option1 = document.getElementById('option1').textContent = question1.option1
+  const option2 = document.getElementById("option2").textContent =
+    question1.option2;
+  const option3 = document.getElementById("option3").textContent =
+    question1.option3;
+  const option4 = document.getElementById("option4").textContent =
+    question1.option4;  
+  startBttn.setAttribute('class', 'hidden')
 });
 
 //alert for win w/ play again?
