@@ -20,7 +20,7 @@ body{
 }
 
 /*changing the color of the background of game*/
-.normal {
+/* .normal {
     background-color: rgba(78, 10, 141, 0.507);
 }
 .correct{
@@ -29,7 +29,7 @@ body{
 
 .incorrect{
     background-color: red;
-}
+} */
 
 #game-container{
     height: 400px;
@@ -91,4 +91,20 @@ h1{
 
 #question{
     margin: 0 20px
+}
+
+#endCard{
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 2px;
+    min-height: 300px;
+    min-width: 300px;
+}
+
+.endFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

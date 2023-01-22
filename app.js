@@ -21,6 +21,7 @@ const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
 const option3 = document.getElementById("option3");
 const option4 = document.getElementById("option4");
+const endScore = document.getElementById('score')
 const questions = [
   {
     question: "What time is it?",
@@ -104,25 +105,27 @@ startBttn.addEventListener("click", () => {
 const changeQuestion = (question) => {
   //resetBackground()
   if(questionIndex < questions.length){
-    questionIndex++
     questionContainer.textContent = question.question;
     option1.textContent = question.answer1;
     option2.textContent = question.answer2;
     option3.textContent = question.answer3;
     option4.textContent = question.answer4;
   }else{
-    alert("yo")
+    console.log(score)
+    gameContainter.classList.add('hidden')
+    endScreen(score)
   }
   
 }
 
 //check for correct answer
-const checkAnswer => (buttonNumber) {
+const checkAnswer = (buttonNumber) => {
   if (questions[questionIndex].correct == buttonNumber) {
-    console.log(questions[questionIndex]);
+    console.log("correct answer");
     /* document.body.classList.remove("normal"); */
     score++;
     console.log(score);
+    questionIndex++;
     changeQuestion(questions[questionIndex]);
   } else {
     score--;
@@ -131,6 +134,14 @@ const checkAnswer => (buttonNumber) {
     document.body.classList.add('wrong') */
   }
 }
+//alert for win w/ play again?
+//alert for lost w/ play again?
+const endScreen = (score) => {
+  let endCard = document.getElementById('endCard')
+  endScore.textContent = "Your Score: " + score
+  endCard.classList.remove('hidden')
+  endCard.classList.add('endFlex')
+}
 
 /* function resetBackground(){
   document.body.classList.add("normal");
@@ -138,9 +149,7 @@ const checkAnswer => (buttonNumber) {
 } */
 //keep track of time stretch goal maybe?
 
-//alert for win w/ play again?
 
-//alert for lost w/ play again?
 
 
 
