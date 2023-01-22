@@ -16,6 +16,7 @@ body{
     max-height: 150vh;
     max-width: 150vw;
     background-color: rgba(78, 10, 141, 0.507);
+    flex-direction: column;
 }
 
 #game-container{
@@ -47,6 +48,7 @@ body{
 #option4{
     grid-column-end: 0;
 }
+
 button{
     height: 40px;
     border: 3px solid black;
@@ -57,10 +59,24 @@ button:hover{
     background-color: brown;
 }
 #start{
-    margin: 0, 0, 10px, 0;
+    margin: 200px  0 0 0;
+    height: 100px;
+    width: 300px;
 }
 
 .hidden{
     display: none;
 }
 
+h1{
+    font-size: 500%;
+    /* background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent; */
+}
+
+#question{
+    margin: 0 20px
+}

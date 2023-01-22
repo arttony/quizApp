@@ -1,14 +1,22 @@
-//keep track of time stretch goal maybe?
+const gameContainter = document.querySelector("main");
+const questionContainer = document.getElementById("question");
+const option1 = document.getElementById("option1");
+const option2 = document.getElementById("option2");
+const option3 = document.getElementById("option3");
+const option4 = document.getElementById("option4");
 
 //keep track of score
-const score = 0;
+let score = 0;
 
-//function to start game
+//keep track of question
+let questionIndex = 0;
+
+//start button event
 const startBttn = document.getElementById("start");
 startBttn.addEventListener("click", () => {
   console.log("lol");
   //console.log(question1.question);
-  
+
   /* const gameContainer = document.createElement("div");
   gameContainer.setAttribute("id", "game-container");
   const body = document.querySelector("body");
@@ -39,19 +47,39 @@ startBttn.addEventListener("click", () => {
   options.append(option1, option2, option3, option4)
   questionContainer.appendChild(options)
   gameContainer.appendChild(questionContainer) */
-  
-  const gameContainter = document.querySelector('main')
-  gameContainter.classList.remove('hidden')
-  const question = document.getElementById('question').textContent = question1.question
-  const option1 = document.getElementById('option1').textContent = question1.option1
-  const option2 = document.getElementById("option2").textContent =
-    question1.option2;
-  const option3 = document.getElementById("option3").textContent =
-    question1.option3;
-  const option4 = document.getElementById("option4").textContent =
-    question1.option4;  
-  startBttn.setAttribute('class', 'hidden')
+  startBttn.setAttribute("class", "hidden");
+  gameContainter.classList.remove("hidden");
+  changeQuestion(question[questionIndex])
 });
+
+//function to change question
+function changeQuestion (question[questionIndex]) {
+  questionIndex++
+  questionContainer.textContent = question[questionIndex].question
+  option1.textContent = question[questionIndex].answer1;
+  option2.textContent = question[questionIndex].answer2;
+  option3.textContent = question[questionIndex].answer3;
+  option4.textContent = question[questionIndex].answer4;
+}
+
+const question1 = {
+  question: "What time is it?",
+  answer1: "yo",
+  answer2: "nope",
+  answer3: "okay",
+  answer4: "lol",
+};
+
+const question2 = {
+  question: "Capitol of France",
+  answer1: "England",
+  answer2: "New York",
+  answer3: "Germany",
+  answer4: "Paris",
+};
+
+
+//keep track of time stretch goal maybe?
 
 //alert for win w/ play again?
 
@@ -63,10 +91,3 @@ startBttn.addEventListener("click", () => {
 //maybe change text.content?
 
 //how do i store the questions and optional answers?
-const question1 = {
-  question: "What time is it?",
-  option1: "yo",
-  option2: "nope",
-  option3: "okay",
-  option4: "lol",
-};
