@@ -19,6 +19,18 @@ body{
     flex-direction: column;
 }
 
+/*changing the color of the background of game*/
+.normal {
+    background-color: rgba(78, 10, 141, 0.507);
+}
+.correct{
+    background-color: green;
+}
+
+.incorrect{
+    background-color: red;
+}
+
 #game-container{
     height: 400px;
     width: 400px;
