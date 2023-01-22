@@ -1,19 +1,19 @@
-//question class
-class Question {
+/* //question class
+ class Question {
 
-  /* constructor(question, ans1, ans2, ans3, ans4) {
+   constructor(question, ans1, ans2, ans3, ans4) {
     this.question = question;
     this.answer1 = ans1
     this.answer2 = ans2
     this.answer3 = ans3
     this.answer4 = ans4
-  } */
+  } 
 
   constructor(obj){
     Object.assign(this, obj);
   }
   
-}
+} */ 
 
 const gameContainter = document.querySelector("main");
 const questionContainer = document.getElementById("question");
@@ -34,21 +34,23 @@ const questions = [
   {
     question: "Capitol of France",
     answer1: "England",
-    answer2: "New York",
+    answer2: "Paris",
     answer3: "Germany",
-    answer4: "Paris",
-    correct: 4,
+    answer4: "New York",
+    correct: 2,
   },
 
   {
     question: "What is the name of the smallest country in the world?",
-    answer1: "England",
-    answer2: "The Vatican City",
-    answer3: "Germany",
+    answer1: "Germany",
+    answer2: "England",
+    answer3: "The Vatican City",
     answer4: "Paris",
-    correct: 2,
+    correct: 3,
   },
 ];
+
+/* const answerKey = ["lol", "Paris", "The Vatican City"]; */
 
 //keep track of score
 let score = 0;
@@ -95,14 +97,15 @@ startBttn.addEventListener("click", () => {
   startBttn.classList.add('hidden');
   gameContainter.classList.remove("hidden");
   changeQuestion(questions[questionIndex])
+ 
 });
 
 //function to change question
-function changeQuestion (question) {
+const changeQuestion = (question) => {
   //resetBackground()
-  if(let =questionIndex < questions.length){
+  if(questionIndex < questions.length){
     questionIndex++
-    questionContainer.textContent = question.question
+    questionContainer.textContent = question.question;
     option1.textContent = question.answer1;
     option2.textContent = question.answer2;
     option3.textContent = question.answer3;
@@ -114,16 +117,16 @@ function changeQuestion (question) {
 }
 
 //check for correct answer
-function checkAnswer(buttonNumber){
-  if(questions[questionIndex].correct == buttonNumber){
+const checkAnswer => (buttonNumber) {
+  if (questions[questionIndex].correct == buttonNumber) {
     console.log(questions[questionIndex]);
     /* document.body.classList.remove("normal"); */
-    score++
-    console.log(score)
+    score++;
+    console.log(score);
     changeQuestion(questions[questionIndex]);
-  } else{
-    score--
-    console.log(score)
+  } else {
+    score--;
+    console.log(score);
     /* document.body.classList.remove("normal")
     document.body.classList.add('wrong') */
   }
