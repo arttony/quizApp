@@ -1,3 +1,5 @@
+
+
 /*cahnge all text font styles*/
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
@@ -68,7 +70,7 @@ button{
     min-width: 100px;
 }
 button:hover{
-    background-color: brown;
+    background-color: rgb(10, 143, 231);
 }
 #start{
     margin: 200px  0 0 0;

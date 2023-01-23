@@ -15,6 +15,7 @@
   
 } */ 
 
+//dom elements
 const gameContainter = document.querySelector("main");
 const questionContainer = document.getElementById("question");
 const option1 = document.getElementById("option1");
@@ -22,6 +23,9 @@ const option2 = document.getElementById("option2");
 const option3 = document.getElementById("option3");
 const option4 = document.getElementById("option4");
 const endScore = document.getElementById('score')
+
+
+//array of object questions
 const questions = [
   {
     question: "What time is it?",
@@ -58,6 +62,8 @@ let score = 0;
 
 //keep track of question
 let questionIndex = 0;
+
+let startTime
 
 //start button event
 const startBttn = document.getElementById("start");
@@ -98,8 +104,13 @@ startBttn.addEventListener("click", () => {
   startBttn.classList.add('hidden');
   gameContainter.classList.remove("hidden");
   changeQuestion(questions[questionIndex])
- 
+  //keep track of time
+  getTime()
 });
+
+const getTime = () =>{
+  startTime = new Date()
+}
 
 //function to change question
 const changeQuestion = (question) => {
@@ -118,7 +129,7 @@ const changeQuestion = (question) => {
   
 }
 
-//check for correct answer
+//function to check for correct answer
 const checkAnswer = (buttonNumber) => {
   if (questions[questionIndex].correct == buttonNumber) {
     console.log("correct answer");
@@ -134,23 +145,32 @@ const checkAnswer = (buttonNumber) => {
     document.body.classList.add('wrong') */
   }
 }
-//alert for win w/ play again?
-//alert for lost w/ play again?
+
+//function to display score and replay button
 const endScreen = (score) => {
+  let endTime = new Date()
   let endCard = document.getElementById('endCard')
   endScore.textContent = "Your Score: " + score
   endCard.classList.remove('hidden')
   endCard.classList.add('endFlex')
+  
+  console.log(endTime - startTime)
 }
+
+//replay button function
+//endCard.classList.add('hidden')
+//questionIndex = 0
+//score = 0
+//gameContainer.classList.remove('hidden')
+//changeQuestion(questions[questionIndex])
 
 /* function resetBackground(){
   document.body.classList.add("normal");
   document.body.classList.remove("wrong");
 } */
+
 //keep track of time stretch goal maybe?
-
-
-
+//new Date
 
 
 //how do i change questions and answers
