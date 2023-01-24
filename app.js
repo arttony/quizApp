@@ -113,7 +113,6 @@ const endScreen = () => {
     "You scored a " + score + " in " + (endTime - startTime) / 1000 + " seconds";
   showContainer(endCard);
   endCard.classList.add("end-flex");
-  console.log(endTime - startTime);
 };
 
 //replay button click function
