@@ -72,15 +72,12 @@ const getEndTime = () => {
 //function to change question
 const changeQuestion = (question) => {
   resetBackground()
-  if (questionIndex < questions.length) {
     questionContainer.textContent = question.question;
     option1.textContent = question.answer1;
     option2.textContent = question.answer2;
     option3.textContent = question.answer3;
     option4.textContent = question.answer4;
-  } else {
-    endScreen();
-  }
+  
 };
 
 //function to check for correct answer
@@ -89,11 +86,16 @@ const checkAnswer = (buttonNumber) => {
     document.body.classList.remove("normal");
     document.body.classList.add('correct')
     score++;
+    questionIndex++
+    if (questionIndex < questions.length){ 
+      setTimeout(() => {
+        
+        changeQuestion(questions[questionIndex]
+      )}, 2000); //waits 2 secs before changing questions
+    } else{
+      endScreen()
+    }
     
-    setTimeout(() => {
-      questionIndex++
-      changeQuestion(questions[questionIndex]
-    )}, 2000); //waits 2 secs before changing questions
   } else {
     score--;
     document.body.classList.remove("normal")
