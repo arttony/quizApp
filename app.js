@@ -110,7 +110,7 @@ const endScreen = () => {
   resetBackground()
   hideContainer(gameContainer)
   endScore.textContent =
-    "You scored " + score + " in " + (endTime - startTime) / 1000 + " seconds";
+    "You scored a " + score + " in " + (endTime - startTime) / 1000 + " seconds";
   showContainer(endCard);
   endCard.classList.add("end-flex");
   console.log(endTime - startTime);
