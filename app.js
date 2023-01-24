@@ -87,9 +87,9 @@ const checkAnswer = (buttonNumber) => {
     document.body.classList.add('correct')
     score++;
     questionIndex++
+    
     if (questionIndex < questions.length){ 
       setTimeout(() => {
-        
         changeQuestion(questions[questionIndex]
       )}, 2000); //waits 2 secs before changing questions
     } else{

@@ -1,6 +1,6 @@
 # quizApp
 
-I wanted to create a simple browser based trivia type of game. This game would be a single player game where the player is playing against themselves, trying to get a better score and time. Currently I am haveing trouble figuring out how I want to randomize the questions. I want to add a feature that displays how much time has elapsed while taking the quiz. Current bugs are that after selecting the correct answer the user can still select an incorrect answer and decrease their score. This is due to the setTimeout I have set to show the green background color to the user to signify they have selected the correct answer. If this does happen the timer is inaccurate. 
+I wanted to create a simple browser based trivia type of game. This game would be a single player game where the player is playing against themselves, trying to get a better score and time. Currently I am haveing trouble figuring out how I want to randomize the questions. I want to add a feature that displays how much time has elapsed while taking the quiz. 
 
 The questions in this app are contained in an array called questions which holds multiple objects. Within these objects are the questions and 4 different answers along with the correct element, which tells which option number is correct.
 
