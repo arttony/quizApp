@@ -27,7 +27,7 @@ const replayBttn = document.getElementById("replayBttn");
 const endCard = document.getElementById("end-container");
 const startBttn = document.getElementById("start");
 
-//array of object questions
+//array of question objects
 const questions = [
   {
     question: "What time is it?",
@@ -65,6 +65,7 @@ let score = 0;
 //keep track of question
 let questionIndex = 0;
 
+//empty startTime var
 let startTime;
 
 //start button event
@@ -115,7 +116,7 @@ const getTime = () => {
 
 //function to change question
 const changeQuestion = (question) => {
-  //resetBackground()
+  resetBackground()
   if (questionIndex < questions.length) {
     questionContainer.textContent = question.question;
     option1.textContent = question.answer1;
@@ -131,21 +132,27 @@ const changeQuestion = (question) => {
 const checkAnswer = (buttonNumber) => {
   if (questions[questionIndex].correct == buttonNumber) {
     console.log("correct answer");
-    /* document.body.classList.remove("normal"); */
+    document.body.classList.remove("normal");
+    document.body.classList.add('correct')
     score++;
     console.log(score);
     questionIndex++;
-    changeQuestion(questions[questionIndex]);
+    setTimeout(() => {changeQuestion(questions[questionIndex])}, 2000);
   } else {
     score--;
     console.log(score);
-    /* document.body.classList.remove("normal")
-    document.body.classList.add('wrong') */
+    document.body.classList.remove("normal")
+    document.body.classList.add('incorrect')
+    setTimeout(() => {
+      document.body.classList.add('normal')
+      document.body.classList.remove('incorrect')
+    }, 800)
   }
 };
 
 //function to display score and replay button
 const endScreen = () => {
+  resetBackground()
   hideContainer(gameContainer)
   let endTime = new Date();
   endScore.textContent =
@@ -157,6 +164,7 @@ const endScreen = () => {
 
 //replay button click function
 const replay =  () => {
+  resetBackground()
   endCard.classList.remove("endFlex");
   hideContainer(endCard)
   questionIndex = 0;
@@ -175,10 +183,11 @@ const showContainer = (container) => {
 };
 
 
-/* function resetBackground(){
+function resetBackground(){
   document.body.classList.add("normal");
-  document.body.classList.remove("wrong");
-} */
+  document.body.classList.remove("incorrect");
+  document.body.classList.remove('correct')
+}
 
 //keep track of time stretch goal maybe?
 //new Date

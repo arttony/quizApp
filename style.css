@@ -17,12 +17,11 @@ body{
     justify-content: center;
     max-height: 150vh;
     max-width: 150vw;
-    background-color: rgba(78, 10, 141, 0.507);
     flex-direction: column;
 }
 
 /*changing the color of the background of game*/
-/* .normal {
+.normal {
     background-color: rgba(78, 10, 141, 0.507);
 }
 .correct{
@@ -31,7 +30,7 @@ body{
 
 .incorrect{
     background-color: red;
-} */
+} 
 
 #game-container{
     height: 400px;
