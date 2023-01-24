@@ -95,18 +95,16 @@ h1{
     margin: 0 20px
 }
 
-#endCard{
-    background-color: white;
-    border: 5px solid black;
-    border-radius: 10px;
-    box-shadow: 0 0 3px 2px;
-    min-height: 300px;
-    min-width: 300px;
-}
 
 .endFlex{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 2px;
+    min-height: 300px;
+    min-width: 300px;
 }

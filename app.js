@@ -24,7 +24,7 @@ const option3 = document.getElementById("option3");
 const option4 = document.getElementById("option4");
 const endScore = document.getElementById("score");
 const replayBttn = document.getElementById("replayBttn");
-const endCard = document.getElementById("endCard");
+const endCard = document.getElementById("end-container");
 const startBttn = document.getElementById("start");
 
 //array of object questions
@@ -68,7 +68,7 @@ let questionIndex = 0;
 let startTime;
 
 //start button event
-startBttn.addEventListener("click", () => {
+const startGame = () => {
   console.log("lol");
   //console.log(question1.question);
 
@@ -107,7 +107,7 @@ startBttn.addEventListener("click", () => {
   changeQuestion(questions[questionIndex]);
   //keep track of time
   getTime();
-});
+};
 
 const getTime = () => {
   startTime = new Date();
@@ -156,22 +156,20 @@ const endScreen = () => {
 };
 
 //replay button click function
-replayBttn.addEventListener("click", () => {
+const replay =  () => {
   endCard.classList.remove("endFlex");
   hideContainer(endCard)
   questionIndex = 0;
   score = 0;
-  showContainer(gameContainer)
-  changeQuestion(questions[questionIndex]);
-  getTime();
-});
+  startGame()
+};
 
 //function to add hidden class
 const hideContainer = (container) => {
   container.classList.add("hidden");
 };
 
-//const remove hidden class
+//function to remove hidden class
 const showContainer = (container) => {
   container.classList.remove("hidden");
 };
