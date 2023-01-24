@@ -16,14 +16,15 @@
 } */ 
 
 //dom elements
-const gameContainter = document.querySelector("main");
+const gameContainer = document.querySelector("main");
 const questionContainer = document.getElementById("question");
 const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
 const option3 = document.getElementById("option3");
 const option4 = document.getElementById("option4");
 const endScore = document.getElementById('score')
-
+const replayBttn = document.getElementById('replayBttn')
+const endCard = document.getElementById("endCard");
 
 //array of object questions
 const questions = [
@@ -102,7 +103,7 @@ startBttn.addEventListener("click", () => {
   questionContainer.appendChild(options)
   gameContainer.appendChild(questionContainer) */
   startBttn.classList.add('hidden');
-  gameContainter.classList.remove("hidden");
+  gameContainer.classList.remove("hidden");
   changeQuestion(questions[questionIndex])
   //keep track of time
   getTime()
@@ -123,7 +124,7 @@ const changeQuestion = (question) => {
     option4.textContent = question.answer4;
   }else{
     console.log(score)
-    gameContainter.classList.add('hidden')
+    gameContainer.classList.add('hidden')
     endScreen(score)
   }
   
@@ -149,7 +150,6 @@ const checkAnswer = (buttonNumber) => {
 //function to display score and replay button
 const endScreen = (score) => {
   let endTime = new Date()
-  let endCard = document.getElementById('endCard')
   endScore.textContent = "Your Score: " + score
   endCard.classList.remove('hidden')
   endCard.classList.add('endFlex')
@@ -157,12 +157,18 @@ const endScreen = (score) => {
   console.log(endTime - startTime)
 }
 
-//replay button function
-//endCard.classList.add('hidden')
-//questionIndex = 0
-//score = 0
-//gameContainer.classList.remove('hidden')
-//changeQuestion(questions[questionIndex])
+//replay button onclick function
+replayBttn.addEventListener('click', () => {
+  endCard.classList.remove('endFlex')
+  endCard.classList.add('hidden')
+  questionIndex = 0
+  score = 0
+  gameContainer.classList.remove('hidden')
+  changeQuestion(questions[questionIndex])
+  startTime = new Date()
+})
+
+
 
 /* function resetBackground(){
   document.body.classList.add("normal");
