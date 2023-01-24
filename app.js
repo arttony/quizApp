@@ -13,7 +13,7 @@ class Question {
     Object.assign(this, obj);
   }
   
-} */ 
+} */
 
 //dom elements
 const gameContainer = document.querySelector("main");
@@ -22,8 +22,8 @@ const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
 const option3 = document.getElementById("option3");
 const option4 = document.getElementById("option4");
-const endScore = document.getElementById('score')
-const replayBttn = document.getElementById('replayBttn')
+const endScore = document.getElementById("score");
+const replayBttn = document.getElementById("replayBttn");
 const endCard = document.getElementById("endCard");
 const startBttn = document.getElementById("start");
 
@@ -65,7 +65,7 @@ let score = 0;
 //keep track of question
 let questionIndex = 0;
 
-let startTime
+let startTime;
 
 //start button event
 startBttn.addEventListener("click", () => {
@@ -102,33 +102,30 @@ startBttn.addEventListener("click", () => {
   options.append(option1, option2, option3, option4)
   questionContainer.appendChild(options)
   gameContainer.appendChild(questionContainer) */
-  startBttn.classList.add('hidden');
-  gameContainer.classList.remove("hidden");
-  changeQuestion(questions[questionIndex])
+  hideContainer(startBttn)
+  showContainer(gameContainer);
+  changeQuestion(questions[questionIndex]);
   //keep track of time
-  getTime()
+  getTime();
 });
 
-const getTime = () =>{
-  startTime = new Date()
-}
+const getTime = () => {
+  startTime = new Date();
+};
 
 //function to change question
 const changeQuestion = (question) => {
   //resetBackground()
-  if(questionIndex < questions.length){
+  if (questionIndex < questions.length) {
     questionContainer.textContent = question.question;
     option1.textContent = question.answer1;
     option2.textContent = question.answer2;
     option3.textContent = question.answer3;
     option4.textContent = question.answer4;
-  }else{
-    console.log(score)
-    gameContainer.classList.add('hidden')
-    endScreen(score)
+  } else {
+    endScreen();
   }
-  
-}
+};
 
 //function to check for correct answer
 const checkAnswer = (buttonNumber) => {
@@ -145,28 +142,39 @@ const checkAnswer = (buttonNumber) => {
     /* document.body.classList.remove("normal")
     document.body.classList.add('wrong') */
   }
-}
+};
 
 //function to display score and replay button
-const endScreen = (score) => {
-  let endTime = new Date()
-  endScore.textContent = "You scored " + score + " in " + (endTime - startTime)/100 + " seconds";
-  endCard.classList.remove('hidden')
-  endCard.classList.add('endFlex')
-  console.log(endTime - startTime)
-}
+const endScreen = () => {
+  hideContainer(gameContainer)
+  let endTime = new Date();
+  endScore.textContent =
+    "You scored " + score + " in " + (endTime - startTime)/1000 + " seconds";
+  showContainer(endCard);
+  endCard.classList.add("endFlex");
+  console.log(endTime - startTime);
+};
 
 //replay button click function
-replayBttn.addEventListener('click', () => {
-  endCard.classList.remove('endFlex')
-  endCard.classList.add('hidden')
-  questionIndex = 0
-  score = 0
-  gameContainer.classList.remove('hidden')
-  changeQuestion(questions[questionIndex])
-  getTime()
-})
+replayBttn.addEventListener("click", () => {
+  endCard.classList.remove("endFlex");
+  hideContainer(endCard)
+  questionIndex = 0;
+  score = 0;
+  showContainer(gameContainer)
+  changeQuestion(questions[questionIndex]);
+  getTime();
+});
 
+//function to add hidden class
+const hideContainer = (container) => {
+  container.classList.add("hidden");
+};
+
+//const remove hidden class
+const showContainer = (container) => {
+  container.classList.remove("hidden");
+};
 
 
 /* function resetBackground(){
@@ -176,7 +184,6 @@ replayBttn.addEventListener('click', () => {
 
 //keep track of time stretch goal maybe?
 //new Date
-
 
 //how do i change questions and answers
 //maybe change text.content?
