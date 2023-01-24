@@ -1,5 +1,5 @@
-/* //question class
- class Question {
+/*question class
+class Question {
 
    constructor(question, ans1, ans2, ans3, ans4) {
     this.question = question;
@@ -25,6 +25,7 @@ const option4 = document.getElementById("option4");
 const endScore = document.getElementById('score')
 const replayBttn = document.getElementById('replayBttn')
 const endCard = document.getElementById("endCard");
+const startBttn = document.getElementById("start");
 
 //array of object questions
 const questions = [
@@ -67,7 +68,6 @@ let questionIndex = 0;
 let startTime
 
 //start button event
-const startBttn = document.getElementById("start");
 startBttn.addEventListener("click", () => {
   console.log("lol");
   //console.log(question1.question);
@@ -150,14 +150,14 @@ const checkAnswer = (buttonNumber) => {
 //function to display score and replay button
 const endScreen = (score) => {
   let endTime = new Date()
-  endScore.textContent = "Your Score: " + score
+  endScore.textContent = "You scored " + score + " in " + (endTime - startTime)/100 + " seconds";
   endCard.classList.remove('hidden')
   endCard.classList.add('endFlex')
   
   console.log(endTime - startTime)
 }
 
-//replay button onclick function
+//replay button click function
 replayBttn.addEventListener('click', () => {
   endCard.classList.remove('endFlex')
   endCard.classList.add('hidden')
