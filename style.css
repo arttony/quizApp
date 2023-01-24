@@ -95,7 +95,7 @@ h1{
 }
 
 
-.endFlex{
+.end-flex{
     display: flex;
     align-items: center;
     justify-content: center;

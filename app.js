@@ -158,14 +158,14 @@ const endScreen = () => {
   endScore.textContent =
     "You scored " + score + " in " + (endTime - startTime)/1000 + " seconds";
   showContainer(endCard);
-  endCard.classList.add("endFlex");
+  endCard.classList.add("end-flex");
   console.log(endTime - startTime);
 };
 
 //replay button click function
 const replay =  () => {
   resetBackground()
-  endCard.classList.remove("endFlex");
+  endCard.classList.remove("end-flex");
   hideContainer(endCard)
   questionIndex = 0;
   score = 0;
