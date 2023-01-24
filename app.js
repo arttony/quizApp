@@ -136,8 +136,11 @@ const checkAnswer = (buttonNumber) => {
     document.body.classList.add('correct')
     score++;
     console.log(score);
-    questionIndex++;
-    setTimeout(() => {changeQuestion(questions[questionIndex])}, 2000);
+    
+    setTimeout(() => {
+      questionIndex++
+      changeQuestion(questions[questionIndex]
+    )}, 2000);
   } else {
     score--;
     console.log(score);
