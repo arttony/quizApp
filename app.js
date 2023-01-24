@@ -153,7 +153,6 @@ const endScreen = (score) => {
   endScore.textContent = "You scored " + score + " in " + (endTime - startTime)/100 + " seconds";
   endCard.classList.remove('hidden')
   endCard.classList.add('endFlex')
-  
   console.log(endTime - startTime)
 }
 
@@ -165,7 +164,7 @@ replayBttn.addEventListener('click', () => {
   score = 0
   gameContainer.classList.remove('hidden')
   changeQuestion(questions[questionIndex])
-  startTime = new Date()
+  getTime()
 })
 
 
