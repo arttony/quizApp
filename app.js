@@ -10,10 +10,12 @@ const replayBttn = document.getElementById("replayBttn");
 const endCard = document.getElementById("end-container");
 const startBttn = document.getElementById("start");
 const music = document.querySelector('audio')
+
 function startMusic() {
   music.play();
   music.volume = 0.1;
 }
+
 //changes the volume on load
 window.onload = () => {
   startMusic();
@@ -154,3 +156,21 @@ const resetBackground = () => {
   document.body.classList.remove("incorrect");
   document.body.classList.remove('correct')
 }
+
+//live clock
+/* function startClock() {
+  var currentDate = new Date();
+
+  time =
+    currentDate.getHours() +
+    ":" +
+    currentDate.getMinutes() +
+    ":" +
+    currentDate.getSeconds();
+
+  document.getElementById("p").innerHTML = time;
+
+  setTimeout(startClock, 1000);
+}
+
+startClock(); */
