@@ -22,7 +22,8 @@ body{
 
 /*changing the color of the background of game*/
 .normal {
-    background-color: rgba(78, 10, 141, 0.507);
+    background-image: linear-gradient(#0A1A3D, #39345F, #674F81, #986DA2, #CC8BC2, #FFACDF);
+    background-attachment: fixed;
 }
 .correct{
     background-color: green;
@@ -70,7 +71,9 @@ button{
     min-width: 100px;
 }
 button:hover{
-    background-color: rgb(10, 143, 231);
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
 }
 #start{
     margin: 200px  0 0 0;
@@ -85,6 +88,7 @@ button:hover{
 
 /*game title styling*/
 h1{
+    color: rgba(245, 245, 245, 0.685);
     font-size: 500%;
     margin: 0 0 0 20px;
     /* background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
