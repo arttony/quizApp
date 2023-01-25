@@ -10,11 +10,16 @@ const replayBttn = document.getElementById("replayBttn");
 const endCard = document.getElementById("end-container");
 const startBttn = document.getElementById("start");
 const music = document.querySelector('audio')
-
+function startMusic() {
+  music.play();
+  music.volume = 0.1;
+}
 //changes the volume on load
 window.onload = () => {
-  music.volume = 0.1
+  startMusic();
 }
+
+
 
 //keep track of score
 let score = 0;
