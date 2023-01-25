@@ -42,13 +42,14 @@ body{
     box-shadow: 0 0 3px 2px;
     align-items: center;
     justify-content: center;
+    margin-top: -525px;
 }
 
 /*grid styling for buttons*/
 #answer-container{
     display: grid;
     gap: 10px;
-    margin: 10px;
+    margin: 10px, 0;
 }
 #option1{
     grid-column-start: 0;
@@ -65,10 +66,12 @@ body{
 
 /*button styling*/
 button{
-    height: 40px;
+    font-size:larger;
+    height: 50px;
     border: 3px solid black;
     border-radius: 10px;
-    min-width: 100px;
+    min-width: 190px;
+    
 }
 button:hover{
     background-color: black;
@@ -76,7 +79,6 @@ button:hover{
     cursor: pointer;
 }
 #start{
-    margin: 200px  0 0 0;
     height: 100px;
     width: 300px;
 }
@@ -91,11 +93,6 @@ h1{
     color: rgba(245, 245, 245, 0.685);
     font-size: 500%;
     margin: 0 0 0 20px;
-    /* background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent; */
 }
 
 /*end container styling*/
@@ -110,4 +107,8 @@ h1{
     box-shadow: 0 0 3px 2px;
     min-height: 300px;
     min-width: 300px;
+}
+
+img{
+    z-index: -1;
 }
