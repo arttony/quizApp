@@ -11,7 +11,7 @@ const endCard = document.getElementById("end-container");
 const startBttn = document.getElementById("start");
 const music = document.querySelector('audio')
 
-/* function startMusic() {
+function startMusic() {
   music.play();
   music.volume = 0.1;
 }
@@ -19,7 +19,7 @@ const music = document.querySelector('audio')
 //changes the volume on load
 window.onload = () => {
   startMusic();
-} */
+}
 
 //keep track of score
 let score = 0;
