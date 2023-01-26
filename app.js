@@ -222,7 +222,7 @@ function checkAnswer(buttonNumber){
     //if there are more questions
     if (questionIndex < questions.length){ 
       setTimeout(() => {
-        changeQuestion(questions[questionIndex]
+        changeQuestion(shuffledQuestion[questionIndex]
       )}, 800); //waits .8 secs before changing questions
     } else{//if there are no more questions
       endScreen()
