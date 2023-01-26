@@ -1,6 +1,6 @@
 # quizApp
 
-I wanted to create a simple browser based trivia type of game. This game would be a single player game where the player is playing against themselves, trying to get a better score and time. Currently I am haveing trouble figuring out how I want to randomize the questions. I want to add a feature that displays how much time has elapsed while taking the quiz. 
+I wanted to create a simple browser based trivia type of game. This game would be a single player game where the player is playing against themselves, trying to get a better score and time. An issue I have ran into while creating this project was getting the music to autoplay on window load. This is due to the fact that Google Chrome's policy no allows for autoplay.
 
 The questions in this app are contained in an array called questions which holds multiple objects. Within these objects are the questions and 4 different answers along with the correct element, which tells which option number is correct.
 
