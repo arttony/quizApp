@@ -3,7 +3,7 @@
 I wanted to create a simple browser based trivia type of game. This game would be a single player game where the player is playing against themselves, trying to get a better score and time. An issue I have ran into while creating this project was getting the music to autoplay on window load. This is due to the fact that Google Chrome's policy no longer allows for autoplay. Another feature I wanted to add was a live timer that starts when the startGame function is called and hides when endScreen is called. In the future I want to refactor the code so that the answers positions can be shuffled as well.
 
 Known Bugs:
-    -User is able to select the next answer wrong or correct in a time interval after the correct answer is chosen and next question appears.
+    -User is able to select the next answer wrong or correct in a time interval after the correct answer is chosen and before next question appears.
 
 The questions in this app are contained in an array called questions which holds multiple objects. Within these objects are the questions and 4 different answers along with the correct element, which tells which option number is correct.
 
