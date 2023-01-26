@@ -1,6 +1,6 @@
 # quizApp
 
-I wanted to create a simple browser based trivia type of game. This game would be a single player game where the player is playing against themselves, trying to get a better score and time. An issue I have ran into while creating this project was getting the music to autoplay on window load. This is due to the fact that Google Chrome's policy no allows for autoplay.
+I wanted to create a simple browser based trivia type of game. This game would be a single player game where the player is playing against themselves, trying to get a better score and time. An issue I have ran into while creating this project was getting the music to autoplay on window load. This is due to the fact that Google Chrome's policy no allows for autoplay. Another feature I wanted to add was a live timer that starts when the startGame function is called and hides when endScreen is called.
 
 The questions in this app are contained in an array called questions which holds multiple objects. Within these objects are the questions and 4 different answers along with the correct element, which tells which option number is correct.
 
