@@ -13,8 +13,8 @@ const startBttn = document.getElementById("start");
 const music = document.querySelector('audio')
 
 function startMusic() {
-  music.play();
   music.volume = 0.1;
+  music.play();
 }
 
 //keep track of score
