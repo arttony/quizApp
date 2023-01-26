@@ -215,20 +215,23 @@ function changeQuestion(question){
 
 //function to check for correct answer
 function checkAnswer(buttonNumber){
+  //if answer is correct
   if (questions[questionIndex].correct == buttonNumber) {
     questionIndex++
     document.body.classList.remove("normal");
     document.body.classList.add('correct')
     score++;
     
+    //if there are more questions
     if (questionIndex < questions.length){ 
       setTimeout(() => {
         changeQuestion(questions[questionIndex]
       )}, 2000); //waits 2 secs before changing questions
-    } else{
+    } else{//if there are no more questions
       endScreen()
     }
     
+  //if answer wrong
   } else {
     score--;
     document.body.classList.remove("normal")

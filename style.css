@@ -111,6 +111,7 @@ h1{
     margin-top: -470px;
 }
 
+/*Places img into behind the containers*/
 img{
     z-index: -1;
 }
