@@ -1,3 +1,4 @@
+//Art Tony Ramirez
 //dom elements
 const gameContainer = document.querySelector("main");
 const questionContainer = document.getElementById("question");
