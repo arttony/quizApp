@@ -31,10 +31,10 @@ let questionIndex = 0;
 let startTime;
 let endTime
 
-//randomized questions
+//randomized questions array
 let shuffledQuestion
 
-//array of question objects
+//array of question objects 16 questions
 const questions = [
   {
     question: "What is the largest ocean in the world?",
