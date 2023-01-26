@@ -17,11 +17,6 @@ function startMusic() {
   music.volume = 0.1;
 }
 
-//changes the volume on load
-window.onload = () => {
-  startMusic();
-}
-
 //keep track of score
 let score = 0;
 
@@ -184,6 +179,7 @@ const questions = [
 
 //start button event
 function startGame(){
+  startMusic();
   //keep track of time
   getStartTime(startTime);
   hideContainer(startBttn)
