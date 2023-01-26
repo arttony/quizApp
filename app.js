@@ -227,7 +227,7 @@ function checkAnswer(buttonNumber){
     if (questionIndex < questions.length){ 
       setTimeout(() => {
         changeQuestion(questions[questionIndex]
-      )}, 800); //waits 2 secs before changing questions
+      )}, 800); //waits .8 secs before changing questions
     } else{//if there are no more questions
       endScreen()
     }
