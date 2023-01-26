@@ -257,7 +257,6 @@ function endScreen(){
 
 //replay button click function
 function replay(){
-  shuffleQuestions(questions)
   resetBackground()
   endCard.classList.remove("end-flex");
   hideContainer(endCard)
